@@ -1,0 +1,35 @@
+body {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #222;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  background-color: rgb(143, 52, 52);
+  direction: rtl;
+}
+
+.star-box {
+  display: none;
+}
+
+.star-box-label {
+  font-size: xx-large;
+  margin: 0 5px;
+}
+
+.container .star-box-label:hover span,
+.container .star-box-label:hover ~ .star-box-label span {
+  color: gold;
+}
+/* + : next sibling operator, applies style to the next sibling matching the selector */
+/* ~ : subsequent sibling, applies to all subsequent siblings instead of just the next one */
+
+.container input[type="radio"]:checked ~ .star-box-label span {
+  color: gold;
+}

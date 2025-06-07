@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="todo-form">
+        <label for="name">Task name</label>
+        <input type="text" name="name" id="name" class="todo-input" placeholder="todo" />
+        <button type="submit" class="btn">Add</button>
+      </form>
+      <table class="todo-list">
+        <thead>
+          <tr>
+            <th>Task name</th>
+            <th>created</th>
+            <th>select</th>
+          </tr>
+        </thead>
+        <tbody id="todo-list-body">
+          <tr>
+            <td>Fake tast</td>
+            <td>today</td>
+            <td><input type="checkbox" id="todo1" class="todo-checkbox" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="delete-btn" id="delete-btn">Delete Selected</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

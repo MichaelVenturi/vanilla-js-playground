@@ -8,12 +8,12 @@
   </head>
   <body>
     <div class="container">
-      <div class="tablist">
-        <div class="tab" id="tab1">Tab 1</div>
-        <div class="tab" id="tab2">Tab 2</div>
-        <div class="tab" id="tab3">Tab 3</div>
+      <div class="tablist" role="tablist">
+        <button class="tab" id="tab1" role="tab" aria-selected="true" aria-controls="tab-content">Tab 1</button>
+        <button class="tab" id="tab2" role="tab" aria-selected="false" aria-controls="tab-content">Tab 2</button>
+        <button class="tab" id="tab3" role="tab" aria-selected="false" aria-controls="tab-content">Tab 3</button>
       </div>
-      <div class="tab-content">content</div>
+      <div class="tab-content" id="tab-content" role="tabpanel" aria-labelledby="tab1"></div>
     </div>
     <script src="script.js"></script>
   </body>

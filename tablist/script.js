@@ -9,19 +9,22 @@ const dummyData = {
 
 let activeTab = tabs[0];
 tabs[0].classList.add("active");
-updateContent();
+updateContent(0);
 
-tabs.forEach((tab) => {
+tabs.forEach((tab, i) => {
   tab.addEventListener("click", () => {
     if (tab !== activeTab) {
       tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
       activeTab.classList.remove("active");
+      activeTab.setAttribute("aria-selected", "false");
       activeTab = tab;
-      updateContent();
+      updateContent(i);
     }
   });
 });
 
-function updateContent() {
+function updateContent(i) {
   tabContent.innerHTML = dummyData[activeTab.id];
+  tabContent.setAttribute("aria-labelledby", `tab${i + 1}`);
 }

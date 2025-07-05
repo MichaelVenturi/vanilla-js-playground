@@ -30,6 +30,9 @@ body {
 
 .tab {
   border: 1px solid black;
+  background: none;
+  font: inherit;
+  color: inherit;
   border-left: 0;
   padding: 10px;
   width: 100%;
